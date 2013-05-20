@@ -29,8 +29,13 @@ public class SafeFood extends DroidGap
     {
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
-        super.loadUrl(Config.getStartUrl());
+     
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        
+        // Splash-Screen
+        super.loadUrl(Config.getStartUrl(), 5000);      
         //super.loadUrl("file:///android_asset/www/index.html")
+        
     }
 }
 
